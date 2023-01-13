@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lobster', cursive;
+font-family: 'Noto Sans', sans-serif;
+}
+html{
+  font-size: 62.5%;
+}
+
+header{
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav{
+display: flex;
+justify-content: center;
+}
+.heading{
+  font-size:6.2rem;
+  margin:3rem .8rem;
+  color: white;
+}
+.logo{
+  width:18%;
+
+}
+form{
+  display: flex;
+  justify-content: center;
+}
+#search{
+  width: 60vw;
+  height: 6rem;
+  border-radius: .8rem;
+  background-color:#fff;
+  position:relative;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+}
+#btn{
+  height: 6rem;
+  width: 10%;
+  position: absolute;
+  left: 70%;
+  font-size: 2.5rem;
+  opacity: 0;
+  z-index: 9;
+  transition:  .4s;
+  background: linear-gradient(to right,	#50C878,#228B22);
+  color: white;
+  outline: none;
+  border-radius: .8rem;
+}
+
+#search:not(:placeholder-shown) ~ #btn{
+ opacity: 1;
+}
+
+/* rwmove 'X' sign from search bar in chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+/* cards */
+.cards{
+  display: flex;
+  justify-content: space-evenly;
+  background-color:#ffffff10;
+  backdrop-filter:blur(5px);
+  -webkit-backdrop-filter:blur(5px);
+  color: white;
+  align-items: center;
+  height: 50vh;
+  width: 60vw;
+  margin: 10rem auto;
+  border-radius: 2rem;
+  
+}
+.weather-indicator{
+  width: 22vw;
+}
+ul{
+  margin: 1.5rem 0;
+}
+li{
+  list-style-type: none;
+  
+}
+.temp{
+  font-size: 5.5rem;
+padding: 1rem;
+}
+.cityName{
+  font-size:4rem;
+}
+.other-info{
+  font-size: 2.5rem;
+  padding: .5rem;
+}
+
+/* respinsiveness */
+
+@media screen and (max-width:1024px){
+  .cards{
+    height: 40rem;
+    width: 80vw;
+  }
+}
+@media screen and (max-width:490px){
+  html{
+    font-size: 35%;
+  }
+.heading{
+    font-size: 5rem;
+  }
+  .logo{
+    width: 15%;
+  }
+  .weather-indicator{
+    width: 35vw;
+  }
+ .cards{
+    width: 90vw;
+    height: 40rem;
+  }
+  #search{
+    width: 90vw;
+    
+  }
+  #btn{
+    left: 85%;
+  }
+
+}

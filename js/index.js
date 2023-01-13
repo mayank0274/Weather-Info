@@ -1,6 +1,9 @@
 	weather("gohana");
 
-	  var weatherImg = document.getElementById('weatherImg');
+
+	const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;// generate your api key from openweathermap website
+
+        var weatherImg = document.getElementById('weatherImg');
 	  var cityname = document.getElementById('city');
 	  var btn = document.getElementById('btn');
 	  var search = document.getElementById("search");
@@ -11,7 +14,7 @@
 	  
 	  
 	  function weather(city){
-	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=68309d00bb90598bff9fa551dead516b&units=metric`).then((res) => res.json()).then((data) =>{
+	fetch(url).then((res) => res.json()).then((data) =>{
 var temp = document.getElementById("temperature");
 	  
 	

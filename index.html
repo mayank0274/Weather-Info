@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <title>WeatherInfo.com</title>
+  <style>
+body{
+      background-image: url(bg1.jpg);
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+  <nav class="nav">
+	<h1 class="heading">WeatherInfo</h1>
+	<img src="logo.png" class="logo" alt="Logo" />
+  </nav>
+  
+<form onsubmit="event.preventDefault();" >
+  <input id="search" type="search"
+placeholder="Enter city..."  required />
+  <input type="submit" id="btn" value="go"/>    
+</form>
+</header>
+
+  <section class="cards">
+    <div class="main-info">
+    <ul class="temp_name">
+      <li class="temp" id="temperature"></li>
+      
+      <li class="cityName" id="city"></li>
+    </ul>
+    
+    <ul class="add_info">
+      <li class="other-info" id="status"></li>
+      <li class="other-info">Feel<span id="feel_temp"></span></li>
+      <li class="other-info">Pressure <span id="Pressure"></span></li>
+      <li class="other-info">Wind speed<span id="wind"></span></li>
+      <li class="other-info">Humidity<span id="humidity"></span></li>
+    </ul>
+    
+      </div>
+      
+      <div class="weather-image">
+        <img src="logo.png" class="weather-indicator" id="weatherImg">
+      </div>
+  </section>
+  
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+	<script src="js/index.js"></script>
+
+</body>
+</html>
